@@ -1,10 +1,9 @@
 import express from "express";
 const app = express();
 
+import home from "./routes/home";
 
-app.get('/', (req, res) => {
-    res.send('Hello from express and typescript');
-});
+app.use('/', home);
 
 
 const port = process.env.PORT || 3000;
